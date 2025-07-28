@@ -30,6 +30,7 @@ function adicionarItemALista(){
     let item = entrada.textContent.trim();
     if (!item)
         return;
+    entrada.textContent = "";
     adicionaNaLista(item);
     atualizarLista();
 }
