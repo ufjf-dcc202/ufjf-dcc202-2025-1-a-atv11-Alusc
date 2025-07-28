@@ -1,4 +1,4 @@
-import { getLista, limpaLista, adicionaItem } from "./lista.js";
+import { getLista, limpaLista, adicionaNaLista } from "./lista.js";
 
 const itens = document.querySelector("#itens");
 const entrada = document.querySelector("#entrada");
@@ -30,7 +30,7 @@ function adicionarItemALista(){
     let item = entrada.textContent.trim();
     if (!item)
         return;
-    adicionaItem(item);
+    adicionaNaLista(item);
     atualizarLista();
 }
 
