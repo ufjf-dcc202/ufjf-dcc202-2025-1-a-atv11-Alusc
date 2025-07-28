@@ -1,4 +1,4 @@
-import { getLista, limpaLista } from "./lista.js";
+import { getLista, limpaLista, adicionaItem } from "./lista.js";
 
 const itens = document.querySelector("#itens");
 const entrada = document.querySelector("#entrada");
@@ -23,3 +23,14 @@ function limpaItensDaLista(){
     limpaLista();
     atualizarLista();
 }
+
+adicionar.addEventListener("click", adicionarItemALista);
+
+function adicionarItemALista(){
+    let item = entrada.textContent.trim();
+    if (!item)
+        return;
+    adicionaItem(item);
+    atualizarLista();
+}
+
